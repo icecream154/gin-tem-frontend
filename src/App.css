@@ -1,0 +1,33 @@
+.hoverCursor:hover {
+  cursor: pointer;
+}
+
+.hoverCursor-img-enlarge:hover {
+  cursor: pointer;
+}
+
+.hoverCursor-img-enlarge-enlarged:hover {
+  cursor: pointer;
+}
+
+.hoverCursor-img-enlarge {  
+  transition: transform 0.3s ease-in-out;  
+}  
+
+.hoverCursor-img-enlarge-enlarged {  
+  transition: transform 0.3s ease-in-out;  
+}  
+  
+.hoverCursor-img-enlarge-enlarged {  
+  transform: scale(1.35); /* 放大倍数 */  
+}
+
+input:focus {
+  border: none;
+  outline: none;
+}
+
+* {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
+}
