@@ -4,6 +4,6 @@ export type Project = {
 }
 
 export const project: Project = {
-    "name": "bank-service",
-    "description": "银行服务示例项目",
+    "name": "my-app",
+    "description": "project_description",
 }
