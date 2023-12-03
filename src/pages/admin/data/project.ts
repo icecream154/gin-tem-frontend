@@ -4,6 +4,6 @@ export type Project = {
 }
 
 export const project: Project = {
-    "name": "my-app",
-    "description": "project_description",
+    "name": "askomo",
+    "description": "留学千问管理平台",
 }
