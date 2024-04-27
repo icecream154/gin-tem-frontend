@@ -155,11 +155,12 @@ export class ImageUploadBox extends Component<ImageUploadBoxProps> {
                             }
                             {
                                 // 文件重置角标
-                                component.state.currentFile &&
+                                (component.state.currentFile || component.state.currentUrl) &&
                                 <ImageUnit
                                     onClick={() => {
                                         component.setState(prevState => (Object.assign(prevState, {
                                             "currentFile": undefined,
+                                            "currentUrl": "",
                                             "currentFileUuid": "",
                                             "progressStatus": "waiting",
                                             "progress": 0
