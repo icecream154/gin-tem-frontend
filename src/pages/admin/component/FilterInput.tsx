@@ -71,7 +71,7 @@ export function InputBoolean(desc: string, value: boolean, setValue: (v: boolean
             <select onChange={(e) => {
                 setValue(e.target.value === "true")
             }}>
-                <option selected={value} value="true">✅</option>
+                <option defaultChecked={true} selected={value} value="true">✅</option>
                 <option selected={!value} value="false">❌</option>
             </select>
         </RowUnit>
