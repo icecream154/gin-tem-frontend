@@ -93,12 +93,14 @@ export type CustomUnitProps = {
      * 点击事件
      */
     onClick?: () => void
+    stopClickPropagation?: boolean
 }
 
 /**
  * 基础组件配置(Unit)
  */
 export type BasicUnitProps = CustomUnitProps & {
+    stopClickPropagation?: boolean
     /**
      * 样式配置
      */

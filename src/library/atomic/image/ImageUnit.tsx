@@ -43,7 +43,7 @@ export class ImageUnit extends Component<ImageProps> {
         }
         return (
             <BoxUnit classname={this.props.classname} onClick={onClick} colorAttr={colorAttr}
-                sizeAttr={sizeAttr} customStyleAttr={customStyleAttr} >
+                     sizeAttr={sizeAttr} customStyleAttr={customStyleAttr} >
                 <img
                     onMouseEnter={this.handleMouseEnter}
                     onMouseLeave={this.handleMouseLeave}
