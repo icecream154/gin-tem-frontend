@@ -54,7 +54,10 @@ export class Unit extends CustomUnit<BasicUnitProps> {
 				onMouseEnter={(event) => { if (onMouseEnterFunc) onMouseEnterFunc(event) }}
 				onMouseLeave={(event) => { if (onMouseLeaveFunc) onMouseLeaveFunc(event) }}
 				onTouchMove={(event) => { if (onTouchMove) onTouchMove(event) }}
-				onClick={() => { if (onClickFunc) onClickFunc() }}
+				onClick={(e) => {
+					if (onClickFunc) onClickFunc()
+					if (this.props.stopClickPropagation) e.preventDefault()
+				}}
 				// onClick={() => { if (!isMobile() && onClickFunc) onClickFunc() }}
 				// onTouchEndCapture={() => { if (isMobile() && onClickFunc) onClickFunc() }}
 				style={this.derivedStyleObj}>

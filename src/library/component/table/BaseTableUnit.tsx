@@ -1,5 +1,4 @@
 import {ReactNode} from "react";
-import {CustomUnitProps} from "../../atomic/unit/UnitProps";
 import {WindowParam} from "../../context/WindowContext";
 import {ColumnUnit} from "../../atomic/unit/ColumnUnit";
 import {BoxUnit, sepLineHorizontal, sepLineVertical} from "../../atomic/unit/BoxUnit";

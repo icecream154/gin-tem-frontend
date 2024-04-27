@@ -12,7 +12,7 @@ export function TableImageCol(imgListJsonStr: string) {
     return (
         <ColumnUnit>
             {
-                imgUrlList.map((image, idx) => {
+                imgUrlList.filter(item => item.trim().length > 0).map((image, idx) => {
                     return (
                         <ImageUnit url={image} customStyleAttr={{"width": "200px", "marginBottom": "16px"}}/>
                     )
