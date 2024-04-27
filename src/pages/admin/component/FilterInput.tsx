@@ -9,6 +9,13 @@ const inputStyle = {
     "fontSize": "1.12em"
 }
 
+const innerInputStyle = {
+    "border": "0.88px solid black",
+    "borderRadius": "2.4px",
+    "paddingLeft": "4px",
+    "paddingRight": "4px"
+}
+
 export function InputString(desc: string, value: string, setValue: (v: string) => void) {
     return (
         <RowUnit customStyleAttr={inputStyle}>
@@ -16,6 +23,7 @@ export function InputString(desc: string, value: string, setValue: (v: string) =
                 {desc}
             </SpanText>
             <input type={"text"}
+                   style={innerInputStyle}
                    value={value} onChange={(e) => {
                 setValue(e.target.value)
             }}/>
@@ -30,6 +38,7 @@ export function InputLongtext(desc: string, value: string, setValue: (v: string)
                 {desc}
             </SpanText>
             <textarea
+                style={innerInputStyle}
                 rows={10}
                 value={value} onChange={(e) => {
                 setValue(e.target.value)
@@ -45,6 +54,7 @@ export function InputNumber(desc: string, value: number, setValue: (v: number) =
                 {desc}
             </SpanText>
             <input type={"text"}
+                   style={innerInputStyle}
                    value={value + ""} onChange={(e) => {
                 setValue(Number(e.target.value))
             }}/>
@@ -61,8 +71,8 @@ export function InputBoolean(desc: string, value: boolean, setValue: (v: boolean
             <select onChange={(e) => {
                 setValue(e.target.value === "true")
             }}>
-                <option selected={value} value="true">√</option>
-                <option selected={!value} value="false">×</option>
+                <option selected={value} value="true">✅</option>
+                <option selected={!value} value="false">❌</option>
             </select>
         </RowUnit>
     )
