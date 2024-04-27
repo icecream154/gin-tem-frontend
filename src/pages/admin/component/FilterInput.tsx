@@ -1,7 +1,7 @@
 import {RowUnit} from "../../../library/atomic/unit/RowUnit";
 import {SpanText} from "../../../library/atomic/text/SpanText";
 
-const inputStyle = {
+export const inputStyle = {
     "marginRight": "14px",
     "marginLeft": "14px",
     "marginTop": "7px",

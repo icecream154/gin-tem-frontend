@@ -53,13 +53,7 @@ export class ImageUploadBox extends Component<ImageUploadBoxProps> {
     render() {
         let fileType = this.props.fileType ? this.props.fileType : "image"
 
-        let w = "380px";
-        if (this.props.size == "medium") {
-            w = "200px"
-        }
-        if (fileType == "docs" || fileType == "image&docs") {
-            w = "480px"
-        }
+        let w = "200px";
         let iconWidth = SizeAttr.pxMultiple(w, 0.07237);
         let h = SizeAttr.pxMultiple(w, 0.75);
 

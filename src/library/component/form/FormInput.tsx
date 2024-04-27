@@ -2,11 +2,11 @@ import {WindowParam} from "../../../library/context/WindowContext";
 import {ColumnUnit} from "../../../library/atomic/unit/ColumnUnit";
 import {SizeAttr} from "../../../library/basic/size";
 import {SpanText} from "../../../library/atomic/text/SpanText";
-import {FontAttr} from "../../../library/basic/font";
 import {heightGap, widthGap} from "../../../library/atomic/unit/BoxUnit";
 import React from "react";
 import {RowUnit} from "../../../library/atomic/unit/RowUnit";
 import {ImageUploadBox, UploadFileType} from "../../atomic/image/ImageUploadBox";
+import {inputStyle} from "../../../pages/admin/component/FilterInput";
 
 export const FormInputHorizontalGap = "6vw"
 
@@ -39,25 +39,26 @@ export function FormInput(wp: WindowParam, inputType: FormInputType, title: stri
         try {
             multiImgs = JSON.parse(currentValue)
         } catch (e) {
-            multiImgs = []
+            multiImgs = ["", "", ""]
         }
     }
 
     return (
-        <ColumnUnit sizeAttr={new SizeAttr(wp, "")}>
-            <SpanText fontAttr={new FontAttr(wp, "1.25em", "500")}>
+        <ColumnUnit customStyleAttr={inputStyle}
+            sizeAttr={new SizeAttr(wp, "")}>
+            <SpanText customStyleAttr={{"marginRight": "6px", "justifyContent": ""}}>
                 {title}
             </SpanText>
             {heightGap(wp, titleGap)}
             {
                 (inputType == "singleImgUpdate" || inputType == "singleDocUpdate" || inputType == "singleImgOrDocUpdate") &&
-                <RowUnit>
+                <RowUnit customStyleAttr={{"marginRight": "6px"}}>
                     <ImageUploadBox currentValue={currentValue} valueUpdate={valueUpdate} size={"large"} fileType={uploadType}/>
                 </RowUnit>
             }
             {
                 inputType == "multiImgUpdate" &&
-                <RowUnit>
+                <RowUnit customStyleAttr={{"marginRight": "6px"}}>
                     {
                         multiImgs.map(((imgUrl, idx) => {
                             return (
